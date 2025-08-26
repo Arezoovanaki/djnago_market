@@ -1,0 +1,31 @@
+# Ignore virtual environments
+env/
+# Byte-compiled / cache files
+--pycache--/
+*.py[cod]
+*$py.class
+
+
+#Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+#Django specific
+#Database
+db.sqlite3
+
+# Django static files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+#OS files
+ .D_Store
+ Thumbs.db
+
+
