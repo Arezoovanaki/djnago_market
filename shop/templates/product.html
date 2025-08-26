@@ -15,14 +15,14 @@
                     <p class="card-text">{{ product.description }}.</p>
                     <br> <br>
                     <button class= 'btn btn-secondary' type='button' value='{{product.id}}'
-                    id='add-cart'>ezafe kardan be sabad kharid</button>
+                    id='add-cart'>Add to cart</button>
 
                     {% if product.is_sale %}
                     <p class="card-text"> gheymat: <strike>{{ product.price | intcomma }}</strike> - {{ product.sale_price | intcomma }} </p>
                     {% else %}
                     <p class="card-text">{{ product.price | intcomma }}</p>
                     {% endif %}
-                    <a href="{% url 'home' %}" class="btn btn-secondary">bazgasht be home</a>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">back to home</a>
 
                 </div>
             </div>

@@ -8,21 +8,21 @@ class SignUpForm(UserCreationForm):
     first_name = forms.CharField(
         label="",
         max_length=50,
-        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'nam khod ra vared konid'})
+        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your Name'})
         )
     last_name = forms.CharField(
         label="",
         max_length=50,
-        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'nam khanevadegi khod ra vared konid'})
+        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your Last Name'})
         )
     email = forms.EmailField(
         label="",
-        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'email khod ra vared konid'})
+        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your Email'})
         )
     username = forms.CharField(
         label="",
         max_length=20,
-        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'username khod ra vared konid','autocomplete': 'off'})
+        widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your Username','autocomplete': 'off'})
         )
     password1 = forms.CharField(
         label="",
@@ -31,7 +31,7 @@ class SignUpForm(UserCreationForm):
                'class':'form-control',
                'name': 'password',
                'type': 'password',
-               'placeholder':'ramz khod ra vared konid'
+               'placeholder':'Enter your Password'
            }
         )
         )
@@ -42,7 +42,7 @@ class SignUpForm(UserCreationForm):
                'class':'form-control',
                'name': 'password',
                'type': 'password',
-               'placeholder':'ramz khod ra dobare vared konid'
+               'placeholder':'Enter your Password'
            }
         )
 

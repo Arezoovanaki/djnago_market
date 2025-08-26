@@ -24,10 +24,10 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request,user)
-            messages.success(request,"ba movafaqiat vared shodid")
+            messages.success(request,"Login successful")
             return redirect("home")
         else:
-            messages.success(request,"user ya pasword eshtebah ast")
+            messages.success(request,"Incorrect username or password")
             return redirect("login")
     else:
     
@@ -36,7 +36,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    messages.success(request,"kharej shodid")
+    messages.success(request,"logged out successfully")
     return redirect("home")
 
 
@@ -50,10 +50,10 @@ def signup_user(request):
             password1 = form.cleaned_data['password1']
             user = authenticate(request,username=username,password=password1)
             login(request,user)
-            messages.success(request,('acount shoma sakhte shod'))
+            messages.success(request,('Account successfully created!'))
             return redirect("home")
         else:
-            messages.success(request,('moshkeli dar sabtename shoma vojood darad!'))
+            messages.success(request,('Something went wrong with your registration!'))
             print(form.errors)
             return redirect("signup")
         
@@ -73,6 +73,6 @@ def category(request,cat):
         products = Product.objects.filter(category = category)
         return render(request,'category.html',{'products':products, category:category})
     except:
-        messages.success(request,'dastebandi vojud nadad')
+        messages.success(request,'No categories found')
         return redirect("home")
         

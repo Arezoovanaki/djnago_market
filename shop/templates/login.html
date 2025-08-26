@@ -5,8 +5,8 @@
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">vared shavid</h1>
-            <p class="lead fw-normal text-white-50 mb-0">vorood be nahiyeye karbari</p>
+            <h1 class="display-4 fw-bolder">Welcome Back</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Login to your Account</p>
         </div>
     </div>
 </header>
@@ -19,11 +19,11 @@
                 <form method="POST" action="{% url 'login' %}">
                     {% csrf_token %}
                     <div class="mb-3">
-                        <input type="text" name="username" placeholder="name karbari ra vared konid">
+                        <input type="text" name="username" placeholder="Enter your User Name">
                     </div>
                     <div class="mb-3">
 
-                        <input type="password" name=password placeholder="password khod ra vared konid">
+                        <input type="password" name=password placeholder="Enter your password">
                     </div>
                     <button type="submit" class="btn btn-primary">login</button>
                 </form>
